@@ -1,0 +1,29 @@
+CHANGES
+=======
+
+* Fix Readme
+* Add license
+* Add python logging support
+* Implement function to get more information about the instances
+* Implement sandbox method
+* Implement setup method
+* Fix identation code
+* Add example into documentation
+* Send process to background (the hard way)
+* Change background process validation
+* Fix import module (for real)
+* Fix import lkvm module
+* Ignore build/ dir
+* Add setup.py install capability
+* Add the implementation of balloon method
+* Change root_helper to string variable
+* Add root helper property
+* Add draft is_support function
+* Add the implementation of stat method
+* Add the implementation of resume method
+* Add the implementation of pause method
+* Add the implementation of stop method
+* Add the implemention of run method
+* Add list_instance method implementation
+* Change name to list_instances
+* Initial structure
