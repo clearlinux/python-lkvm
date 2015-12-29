@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: python-lkvm
+Version: 0.3
+Summary: Library for lkvm
+Home-page: https://github.com/clearlinux/python-lkvm
+Author: Obed N Munoz
+Author-email: obed.n.munoz@intel.com
+License: Apache-2.0
+Description: python-lkvm is a python wrapper for lkvm command
+Platform: Unix
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
