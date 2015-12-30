@@ -55,7 +55,7 @@ class Client(object):
         if isinstance(pid, six.string_types):
             pid = int(pid)
         try:
-            args = psutil.Process(pid).cmdline[2:]
+            args = psutil.Process(pid).cmdline()[2:]
         except NoSuchProcess:
             raise LKVMException("PID %s not found" % pid)
         props = {args[i][2:]: args[i+1] for i in range(0, len(args), 2)}
@@ -76,7 +76,7 @@ class Client(object):
         if hasattr(os, 'geteuid') and os.geteuid() != 0 and not self._root_helper:
             return
 
-        command = [LKVM_PATH] 
+        command = [LKVM_PATH]
         if self._root_helper:
             command = [self._root_helper] + command
         command.append(cmd)
@@ -188,7 +188,7 @@ class Client(object):
         if rng:
             _params.append('--rng')
         if plan9:
-            _params.append('--9p') 
+            _params.append('--9p')
         if disk:
             _params.extend(['--disk', disk])
         if dev:
@@ -274,7 +274,7 @@ class Client(object):
 
         :param run:            List running instances
         :type cmd:             boolean
-        :param rootfs:         List rootfs instances 
+        :param rootfs:         List rootfs instances
         :type args:            boolean
 
         """
@@ -299,7 +299,7 @@ class Client(object):
                   instances.append(instance)
 
         return instances
-        
+
     def balloon(self, name, amount, balloon_options):
         """Inflate or deflate the virtio balloon
 
@@ -307,7 +307,7 @@ class Client(object):
         :type name:             string
         :param amount:          Amount to inflate/deflate (in MB)
         :type amount:           integer
-        :param ballon_options:  
+        :param ballon_options:
 
         """
         params = ['name', name]
@@ -449,7 +449,7 @@ class Client(object):
         if rng:
             _params.append('--rng')
         if plan9:
-            _params.append('--9p') 
+            _params.append('--9p')
         if disk:
             _params.extend(['--disk', disk])
         if dev:
