@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: python-lkvm
-Version: 0.4
+Version: 0.5
 Summary: Library for lkvm
 Home-page: https://github.com/clearlinux/python-lkvm
 Author: Obed N Munoz
